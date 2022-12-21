@@ -4,12 +4,14 @@ body{
   position: relative;
 }
 
-.portrait-helper{
-  position: absolute;
-  top: 40vh;
-  text-align: center;
-  width: 100%;
-  background-color: darkcyan;
-  color: white;
-  font-size: 30px;
+@media screen and (max-height: 740px;){
+  .portrait-helper{
+    position: absolute;
+    top: 40vh;
+    text-align: center;
+    width: 100%;
+    background-color: darkcyan;
+    color: white;
+    font-size: 30px;
+  }
 }
