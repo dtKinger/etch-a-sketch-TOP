@@ -82,9 +82,9 @@ button:hover{
   .container{
     width: 300px;
     height: 300px;
-    position: absolute;
-    top: 18px;
-    left: 281px;
+    position: relative;
+    top: -11px;
+    left: 0px;
     
   }
 }
