@@ -1,8 +1,15 @@
-*{
-  display: none;
+body{
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
-body{
-  display: block;
-  content: 'Turn your phone sideways';
+.portrait-helper{
+  position: absolute;
+  top: 40vh;
+  text-align: center;
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  font-size: 30px;
 }
