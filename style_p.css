@@ -4,20 +4,18 @@ body{
   position: relative;
 }
 
-@media screen and (max-height: 600px){
-  .portrait-helper{
-    display: none;
-  }
+.portrait-helper{
+  position: absolute;
+  top: 40vh;
+  text-align: center;
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  font-size: 30px;
 }
 
-@media screen and (max-height: 600px){
+@media screen and (min-width: 651px){
   .portrait-helper{
-    position: absolute;
-    top: 40vh;
-    text-align: center;
-    width: 100%;
-    background-color: darkcyan;
-    color: white;
-    font-size: 30px;
+    display: none;
   }
 }

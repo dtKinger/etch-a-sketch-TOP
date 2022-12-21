@@ -64,25 +64,30 @@ button:hover{
   gap: 0px;
 }
 
-@media screen and (max-height: 650px){
+@media screen and (max-height: 550px){
   
   body{
     background-color: black;
+    background-image: url("mobile-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .section-a{
-    max-height: 90vh;
-    background-image: url("mobile-background.jpg");
-    background-size: 660px 363px;
+    max-height: 100%;
+    background-image: none;
     background-position: center;
+    position: relative;
 
   }
   
   .container{
-    width: 322px;
-    height: 322px;
-    top: 44px;
-    left: 261px;
+    width: 51.75%;
+    height: 88%;
+    position: absolute;
+    top: 30px;
+    
   }
 }
 
