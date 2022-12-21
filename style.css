@@ -64,8 +64,18 @@ button:hover{
   gap: 0px;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 740px){
+  
+  .section-a{
+    background-image: url("etch-a-sketch-bg.jpg");
+    background-size: 440px;
+  }
+  
   .container{
+    width: 216px;
+    height: 216px;
+    top: 66px;
+    left: 112px;
 
   }
 }
