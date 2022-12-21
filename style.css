@@ -18,7 +18,7 @@ body {
   background-image: url("etch-a-sketch-bg.jpg");
   background-size: 860px;
   background-repeat: no-repeat;
-  background-color: black;
+  background-color: rgb(38, 38, 38);
   background-position: relative;
   background-position-x: center;
 }
@@ -70,7 +70,6 @@ button:hover{
 @media screen and (max-height: 550px){
   
   body{
-    background-color: black;
     background-image: url("mobile-background.jpg");
     background-size: 610px 338px;
     background-repeat: no-repeat;
