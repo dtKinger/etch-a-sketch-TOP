@@ -62,12 +62,11 @@ button:hover{
   top: 130px;
   left: 220px;
   gap: 0px;
-  border: 1px solid #767676;
 }
 
 @media screen and (max-width: 480px){
   .container{
-    
+
   }
 }
 

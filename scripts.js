@@ -23,7 +23,7 @@ function makeRows(rows, cols) {
   };
 };
 
-makeRows(30, 30);
+makeRows(50, 50);
 
 /* =================
 END OF GRID CREATION
