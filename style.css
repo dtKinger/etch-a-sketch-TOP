@@ -9,7 +9,7 @@
 div{
   border: 2px solid red;
 }
-*/
+ */
 
 body {
   font-family: 'Quicksand', sans-serif;
@@ -38,16 +38,17 @@ button:hover{
 }
 
 .section-wrapper{
-  height: 80vh;
-  background-color: bisque;
+  height: 100vh;
   padding: 30px 30px;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .section-a{
-  background-color: lightcyan;
+  background-image: url("etch-a-sketch-bg.jpg");
+  background-size: 860px;
+  background-repeat: no-repeat;
 }
 
 .section-b{
@@ -55,26 +56,37 @@ button:hover{
 }
 
 .container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex: 1;
-  flex-wrap: wrap;
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  top: 130px;
+  left: 220px;
+  gap: 0px;
+  border: 1px solid #767676;
 }
 
-.container__row{
-  flex-direction: row;
+@media screen and (max-width: 480px){
+  .container{
+    
+  }
 }
 
-.item{
-  display: flex;
-  flex: 1;
-  background-color: royalblue;
-  border-radius: 20px;
-  padding: 20px;
-  min-width: 300px;
-  max-width: 80%;
-  justify-content: center;
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-item {
+  border: 1px solid #ddd;
+  background-color: black;
+}
+
+.on{
+  background-color: black;
 }
