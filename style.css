@@ -64,19 +64,25 @@ button:hover{
   gap: 0px;
 }
 
-@media screen and (max-width: 740px){
+@media screen and (max-height: 650px){
   
+  body{
+    background-color: black;
+  }
+
   .section-a{
-    background-image: url("etch-a-sketch-bg.jpg");
-    background-size: 440px;
+    max-height: 90vh;
+    background-image: url("mobile-background.jpg");
+    background-size: 660px 363px;
+    background-position: center;
+
   }
   
   .container{
-    width: 216px;
-    height: 216px;
-    top: 66px;
-    left: 112px;
-
+    width: 322px;
+    height: 322px;
+    top: 44px;
+    left: 261px;
   }
 }
 
@@ -100,6 +106,6 @@ button:hover{
   background-color: black;
 }
 
-.landscape-helper{
+.portrait-helper{
   display: none;
 }
