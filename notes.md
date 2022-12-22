@@ -14,3 +14,9 @@ Make an etch-a-sketch app.
   1. changing div's background color using JS
 * 
 
+## TO DO
+1. Add a Clear button
+1. Add a Hide gridlines button
+1. Add an eraser / marker option
+1. Add a colour picker - set variable in CSS
+

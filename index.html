@@ -7,18 +7,22 @@
   <link rel="stylesheet" type="text/css" href="style_p.css" media="screen and (max-width: 650px)">
   <link rel="stylesheet" href="style.css" media="screen and (min-width: 651px)">
   <link rel="icon" type="image/x-icon" href="/favicon.png">
-  <title>Scripty</title>
+  <title>Etch-a-sketch</title>
 </head>
 <body>
   <div class="portrait-helper">To use Etch-a-Sketch, rotate your device to landscape mode.</div>
   <div class="page-wrapper">
     <section class="section-wrapper section-a">
-      <div class="controls">
+      <div class="left-controls">
         <label for="grid-size">Grid size</label>
         <input type="range" id="grid-size" name="grid_size" min="16" max="96" value="48" step="16">
         <output>48 px<sup>2</sup></output>
       </div>
       <div class="container" id="container">
+      </div>
+      <div class="right-controls">
+        <button id="toggle-grid">Toggle Gridlines</button>
+        <button onclick="clearGrid(), getGrid(), makeGrid(48)">Clear Sketch</button>
       </div>
     </section>
   </div>

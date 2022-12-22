@@ -28,15 +28,43 @@ ol, li {
 }
 
 button{
-  background-color: black;
+  background-color: rgb(56, 56, 56);
   color: white;
-  padding: 10px 20px;
+  padding: 6px 10px;
   margin: 10px;
   font-size: 18px;
+  max-width: 120px;
+  word-break: normal;
+  text-align: center;
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px white;
+}
+
+.clicked-in {
+  background-color:rgb(92, 92, 92);
+  transform: scale(0.9);
 }
 
 button:hover{
   cursor: pointer;
+}
+
+
+.right-controls{
+  position: relative;
+  right: -10px;
+  top: 240px;
+  max-width: 120px;
+}
+
+.left-controls{
+  display: block;
+  position: relative;
+  left: 10px;
+  top: 230px;
+  color: rgb(240, 240, 240);
+  font-weight: 900;
 }
 
 .page-wrapper{
@@ -51,19 +79,12 @@ button:hover{
   justify-content: center;
 }
 
-.section-a{
-}
-
-.section-b{
-  background-color: lightcoral;
-}
-
 .container{
   width: 420px;
   height: 420px;
   position: relative;
   top: 100px;
-  left: -136px;
+  left: -72px;
 }
 
 :root {
@@ -81,17 +102,12 @@ button:hover{
   border: 1px solid #ddd;
 }
 
-.on{
-  background-color: black;
+.no-border {
+  border: none;
 }
 
-.controls{
-  display: block;
-  position: relative;
-  left: -56px;
-  top: 230px;
-  color: rgb(240, 240, 240);
-  font-weight: 900;
+.on{
+  background-color: black;
 }
 
 #grid-size{
@@ -132,13 +148,23 @@ MEDIA QUERIES
     width: 300px;
     height: 300px;
     top: -11px;
-    left: -80px;
+    left: -15px;
   }
 
-  .controls{
+  .left-controls{
     max-width: 150px;
-    left: -65px;
+    left: 0px;
     top: 0px;
+  }
+
+  .right-controls{
+   right: -35px; 
+   top: 70px;
+  }
+
+  button{
+    font-size: 14px;
+    max-width: 70px;
   }
 
   #grid-size{
@@ -153,7 +179,7 @@ MEDIA QUERIES
 
 /* Desktop Small Screen hides */
 @media screen and (max-width: 550px){
-  .controls{
+  .left-controls, .right-controls{
     display: none;
   }
 

@@ -3,6 +3,17 @@ const container = document.getElementById("container");
 // Get the HTML range element
 const range = document.getElementById('grid-size');
 
+/* ====================
+Toggle Gridlines Button
+==================== */
+const toggleGrid = document.getElementById('toggle-grid');
+toggleGrid.addEventListener('click', toggleGridLines); 
+function toggleGridLines(){
+  toggleGrid.classList.toggle('clicked-in');
+  let divs = document.querySelectorAll('.grid_item');
+  divs.forEach(grid_item => grid_item.classList.toggle('no-border'));
+};
+
 //
 function getGrid(){
   let divs = document.querySelectorAll('.grid_item');
@@ -62,3 +73,9 @@ range.addEventListener('change', (e) => {
   getGrid();
   paintOn();
 });
+
+/* ===============
+GAME SETTINGS
+=============== */
+
+// Toggle Gridlines
