@@ -14,16 +14,15 @@ e.g. 32 divs in a row by 32 columns.
 ================================= */
 const container = document.getElementById("container");
 
-function makeRows(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-  for (c = 0; c < (rows * cols); c++) {
+function makeGrid(size) {
+  container.style.setProperty('--grid-size', size);
+  for (c = 0; c < (size * size); c++) {
     let cell = document.createElement("div");
     container.appendChild(cell).className = "grid-item";
   };
 };
 
-makeRows(50, 50);
+makeGrid(24);
 
 /* =================
 END OF GRID CREATION
