@@ -19,3 +19,7 @@ body{
     display: none;
   }
 }
+
+.controls{
+  display: none;
+}

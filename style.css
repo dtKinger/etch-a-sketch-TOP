@@ -103,6 +103,34 @@ button:hover{
   background-color: black;
 }
 
+.controls{
+  display: block;
+  position: absolute;
+  left: 110px;
+  top: 150px;
+}
+
+#grid-size{
+  transform: rotate(-90deg);
+  position: relative;
+  top: 100px;
+  left: -100px;
+}
+
+output{
+  position: relative;
+  top: 200px;
+  left: -178px;
+}
+
+
+@media screen and (max-width: 725px){
+  .controls{
+    display: none;
+  }
+};
+
+
 .on{
   background-color: black;
 }

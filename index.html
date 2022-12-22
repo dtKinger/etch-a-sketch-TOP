@@ -13,6 +13,12 @@
   <div class="portrait-helper">Rotate your device sideways</div>
   <div class="page-wrapper">
     <section class="section-wrapper section-a">
+      <div class="controls">
+        <form action=""></form>
+        <label for="grid-size">Gridsize</label>
+        <input type="range" id="grid-size" name="grid_size" min="16" max="96" value="48" step="16" oninput="this.nextElementSibling.value = this.value">
+        <output>48</output>
+      </div>
       <div class="container" id="container">
       </div>
     </section>
