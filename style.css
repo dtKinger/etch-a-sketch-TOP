@@ -77,8 +77,11 @@ button:hover{
   grid-template-columns: repeat(var(--grid-size), 1fr);
 }
 
-.grid-item {
+.grid_item {
   border: 1px solid #ddd;
+}
+
+.on{
   background-color: black;
 }
 
@@ -104,6 +107,15 @@ output{
   left: -196px;
 }
 
+.portrait-helper, .mobile-footer{
+  display: none;
+}
+
+/* ===============
+MEDIA QUERIES
+=============== */
+
+/* Mobile LANDSCAPE view */
 @media screen and (max-height: 550px){
   
   body{
@@ -138,6 +150,8 @@ output{
   }
 }
 
+
+/* Desktop Small Screen hides */
 @media screen and (max-width: 550px){
   .controls{
     display: none;
@@ -147,11 +161,3 @@ output{
     left: 0px;
   }
 };
-
-.on{
-  background-color: black;
-}
-
-.portrait-helper, .mobile-footer{
-  display: none;
-}
