@@ -1,20 +1,18 @@
+// Get the container in memory
 const container = document.getElementById("container");
+// Get the HTML range element
 const range = document.getElementById('grid-size');
 
-// 1a. Show a greyed-out placeholder text
-// showing the entry in real time, e.g. they type 64, grey out "x 64 grid".)
+//
+function getGrid(){
+  let divs = document.querySelectorAll('.grid_item');
+  divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));
+  };
 
-// 1b. Delete any existing grid
-
-// Move the oninput handler to become an addEventListener
-// so I can have a second one that appends
-// oninput="this.value.appendChild('px<sup>2</sup>)"
-
-
-/* =================================
-// 1d. Create a grid of divs,
-e.g. 32 divs in a row by 32 columns.
-================================= */
+/* ======================================
+// 1d. Create a grid of divs based on one 
+unit selection, e.g. 32 squared pixels.
+====================================== */
 function makeGrid(size) {
   container.style.setProperty('--grid-size', size);
   for (c = 0; c < (size * size); c++) {
@@ -26,13 +24,13 @@ function makeGrid(size) {
 // Load default Grid. Use 48, same as markup.
 makeGrid(48);
 
-// Copy + Paste the drawing functions from inside 
+ /* ===============================
+  ENABLE ETCH A SKETCH ON PAGE LOAD
+  ============================== */
 function paintOn(e) {
   this.classList.add('on');
 }
-
-let divs = document.querySelectorAll('.grid_item');
-divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));
+getGrid();
 
 /* =================
 END OF GRID CREATION
@@ -60,15 +58,7 @@ range.addEventListener('change', (e) => {
   // At the same time - update the grid size output display
   range.addEventListener('change', (e) => {
   range.nextElementSibling.innerHTML = `${e.target.value}` + " px<sup>2</sup>";
-
-  // And Also Enable:
-  /* ==========
-  ETCH A SKETCH
-  ========== */
-  function paintOn(e) {
-    this.classList.add('on');
-  }
-
-  let divs = document.querySelectorAll('.grid_item');
-  divs.forEach(grid_item => grid_item.addEventListener('mouseenter', paintOn));  
+  // Enable Etch-a-sketch after grid is re-drawn.
+  getGrid();
+  paintOn();
 });
