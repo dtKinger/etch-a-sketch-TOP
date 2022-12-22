@@ -36,15 +36,17 @@ function makeGrid(size) {
   };
 };
 
-// Load default Grid. Use 48, same as markup.
-makeGrid(48);
 
- /* ===============================
-  ENABLE ETCH A SKETCH ON PAGE LOAD
-  ============================== */
+/* ===============================
+ENABLE ETCH A SKETCH ON PAGE LOAD
+============================== */
+
 function paintOn(e) {
   this.classList.add('on');
 }
+// Load default Grid. Use 48, same as markup.
+makeGrid(48);
+
 getGrid();
 
 /* =================
