@@ -6,10 +6,14 @@ const range = document.getElementById('grid-size');
 /* ====================
 Toggle Gridlines Button
 ==================== */
+// Get Toggle Gridlines Button
 const toggleGrid = document.getElementById('toggle-grid');
 toggleGrid.addEventListener('click', toggleGridLines); 
+// Onclick, do two things:
 function toggleGridLines(){
+  // 1. Add clicked-in styles to the button
   toggleGrid.classList.toggle('clicked-in');
+  // 2. Get all grid items and toggle 'no-border' class
   let divs = document.querySelectorAll('.grid_item');
   divs.forEach(grid_item => grid_item.classList.toggle('no-border'));
 };
@@ -71,7 +75,6 @@ range.addEventListener('change', (e) => {
   range.nextElementSibling.innerHTML = `${e.target.value}` + " px<sup>2</sup>";
   // Enable Etch-a-sketch after grid is re-drawn.
   getGrid();
-  paintOn();
 });
 
 /* ===============
