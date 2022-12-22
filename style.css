@@ -63,28 +63,7 @@ button:hover{
   height: 420px;
   position: relative;
   top: 100px;
-  left: 0px;
-  gap: 0px;
-}
-
-@media screen and (max-height: 550px){
-  
-  body{
-    background-image: url("mobile-background.jpg");
-    background-size: 610px 338px;
-    background-repeat: no-repeat;
-    background-position: relative;
-  }
-
-  .section-a{
-  }
-  
-  .container{
-    width: 300px;
-    height: 300px;
-    top: -11px;
-    left: 0px;
-  }
+  left: -118px;
 }
 
 :root {
@@ -105,9 +84,9 @@ button:hover{
 
 .controls{
   display: block;
-  position: absolute;
-  left: 110px;
-  top: 150px;
+  position: relative;
+  left: -70px;
+  top: 230px;
 }
 
 #grid-size{
@@ -123,12 +102,50 @@ output{
   left: -178px;
 }
 
+@media screen and (max-height: 550px){
+  
+  body{
+    background-image: url("mobile-background.jpg");
+    background-size: 610px 338px;
+    background-repeat: no-repeat;
+    background-position: relative;
+  }
 
-@media screen and (max-width: 725px){
+  .section-a{
+  }
+  
+  .container{
+    width: 300px;
+    height: 300px;
+    top: -11px;
+    left: -118px;
+  }
+
+  .controls{
+    max-width: 150px;
+    left: -65px;
+    top: 0px;
+  }
+
+  #grid-size{
+    left: -30px;
+  }
+
+  output{
+    left: 25px;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 725px){
   .controls{
     display: none;
   }
+
+  .container{
+    left: 0px;
+  }
 };
+
 
 
 .on{

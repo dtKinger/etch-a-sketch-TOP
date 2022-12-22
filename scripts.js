@@ -1,3 +1,4 @@
+
 // 1. Take an input for Grid size
 
 // 1a. Show a greyed-out placeholder text
@@ -22,8 +23,25 @@ function makeGrid(size) {
   };
 };
 
-makeGrid(24);
+// Load default Grid. Use 48, same as markup.
+makeGrid(48);
+
 
 /* =================
 END OF GRID CREATION
 ================= */
+
+function clearGrid(){
+  document.getElementById('container').innerHTML = '';
+};
+
+/* ===============
+CHANGE GRID SIZE
+=============== */
+const range = document.getElementById('grid-size');
+range.addEventListener('change', (e) => {
+  size = e.target.value;
+  confirm('This will delete your current grid', "Ok", "Cancel");
+  clearGrid();
+  makeGrid(size);
+});
