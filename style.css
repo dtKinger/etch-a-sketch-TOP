@@ -85,7 +85,7 @@ button:hover{
 .controls{
   display: block;
   position: relative;
-  left: -70px;
+  left: -56px;
   top: 230px;
 }
 
@@ -99,7 +99,7 @@ button:hover{
 output{
   position: relative;
   top: 200px;
-  left: -178px;
+  left: -196px;
 }
 
 @media screen and (max-height: 550px){
@@ -132,7 +132,7 @@ output{
   }
 
   output{
-    left: 25px;
+    left: 10px;
   }
 }
 
