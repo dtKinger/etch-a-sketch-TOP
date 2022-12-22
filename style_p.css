@@ -20,6 +20,10 @@ body{
   }
 }
 
+a, a:link, a:hover, a:visited{
+  color: black;
+}
+
 .controls{
   display: none;
 }
