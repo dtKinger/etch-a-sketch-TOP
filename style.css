@@ -87,6 +87,8 @@ button:hover{
   position: relative;
   left: -56px;
   top: 230px;
+  color: rgb(240, 240, 240);
+  font-weight: 900;
 }
 
 #grid-size{
@@ -136,7 +138,7 @@ output{
   }
 }
 
-@media screen and (min-width: 550px) and (max-width: 725px){
+@media screen and (max-width: 550px){
   .controls{
     display: none;
   }
@@ -146,12 +148,10 @@ output{
   }
 };
 
-
-
 .on{
   background-color: black;
 }
 
-.portrait-helper{
+.portrait-helper, .mobile-footer{
   display: none;
 }

@@ -1,17 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+
 body{
   display: flex;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
 }
 
 .portrait-helper{
-  position: absolute;
-  top: 40vh;
+  display: flex;
   text-align: center;
+  align-items: center;
   width: 100%;
-  background-color: darkcyan;
+  min-height: 90vh;
+  background-color: rgb(223, 30, 30);
   color: white;
   font-size: 30px;
+  flex: 1;
+}
+
+.mobile-footer{
+  background-color: lightcyan;
+  display: flex;
+  max-width: 100vw;
+  justify-content: space-between;
+  align-items: bottom;
+  flex: 1;
+}
+
+.mobile-footer p{
+  padding: 20px;
 }
 
 @media screen and (min-width: 651px){
