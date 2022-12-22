@@ -26,6 +26,13 @@ function makeGrid(size) {
 // Load default Grid. Use 48, same as markup.
 makeGrid(48);
 
+function paintOn(e) {
+  this.classList.add('on');
+}
+
+let divs = document.querySelectorAll('.grid_item');
+divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));
+
 /* =================
 END OF GRID CREATION
 ================= */
@@ -50,17 +57,14 @@ range.addEventListener('change', (e) => {
 // At the same time - update the grid size output display
 range.addEventListener('change', (e) => {
   range.nextElementSibling.innerHTML = `${e.target.value}` + " px<sup>2</sup>";
+
+  /* ==========
+  ETCH A SKETCH
+  ========== */
+  function paintOn(e) {
+    this.classList.add('on');
+  }
+
+  let divs = document.querySelectorAll('.grid_item');
+  divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));  
 });
-
-/* ==========
-ETCH A SKETCH
-========== */
-function paintOn(e) {
-  this.classList.add('on');
-}
-
-let divs = document.querySelectorAll('.grid_item');
-divs.forEach(grid_item => grid_item.addEventListener('mouseenter', paintOn));
-
-// const keys = document.querySelectorAll('.key');
-// keys.forEach(key => key.addEventListener('transitionend', removeTransition));
