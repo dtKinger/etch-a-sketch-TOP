@@ -26,6 +26,7 @@ function makeGrid(size) {
 // Load default Grid. Use 48, same as markup.
 makeGrid(48);
 
+// Copy + Paste the drawing functions from inside 
 function paintOn(e) {
   this.classList.add('on');
 }
@@ -37,6 +38,8 @@ divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));
 END OF GRID CREATION
 ================= */
 
+
+// Clear grid before re-creating it.
 function clearGrid(){
   document.getElementById('container').innerHTML = '';
 };
@@ -54,10 +57,11 @@ range.addEventListener('change', (e) => {
   makeGrid(size);
 });
 
-// At the same time - update the grid size output display
-range.addEventListener('change', (e) => {
+  // At the same time - update the grid size output display
+  range.addEventListener('change', (e) => {
   range.nextElementSibling.innerHTML = `${e.target.value}` + " px<sup>2</sup>";
 
+  // And Also Enable:
   /* ==========
   ETCH A SKETCH
   ========== */
@@ -66,5 +70,5 @@ range.addEventListener('change', (e) => {
   }
 
   let divs = document.querySelectorAll('.grid_item');
-  divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));  
+  divs.forEach(grid_item => grid_item.addEventListener('mouseenter', paintOn));  
 });
