@@ -19,4 +19,4 @@ Make an etch-a-sketch app.
 1. Add a Hide gridlines button
 1. Add an eraser / marker option
 1. Add a colour picker - set variable in CSS
-
+1. On clearSketch(), if Toggle Gridlines contains class 'clicked-in', toggle that button again.

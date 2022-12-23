@@ -1,33 +1,17 @@
-// Get the container in memory
+/* ================
+GLOBAL DECLARATIONS 
+================ */
+
+// Get the grid container in memory
 const container = document.getElementById("container");
 // Get the HTML range element
 const range = document.getElementById('grid-size');
 
-/* ====================
-Toggle Gridlines Button
-==================== */
-// Get Toggle Gridlines Button
-const toggleGrid = document.getElementById('toggle-grid');
-toggleGrid.addEventListener('click', toggleGridLines); 
-// Onclick, do two things:
-function toggleGridLines(){
-  // 1. Add clicked-in styles to the button
-  toggleGrid.classList.toggle('clicked-in');
-  // 2. Get all grid items and toggle 'no-border' class
-  let divs = document.querySelectorAll('.grid_item');
-  divs.forEach(grid_item => grid_item.classList.toggle('no-border'));
-};
+/* =============
+GRID RE/CREATION
+============= */
 
-//
-function getGrid(){
-  let divs = document.querySelectorAll('.grid_item');
-  divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));
-  };
-
-/* ======================================
-// 1d. Create a grid of divs based on one 
-unit selection, e.g. 32 squared pixels.
-====================================== */
+// Auto-generate a CSS-grid based on one input
 function makeGrid(size) {
   container.style.setProperty('--grid-size', size);
   for (c = 0; c < (size * size); c++) {
@@ -36,28 +20,30 @@ function makeGrid(size) {
   };
 };
 
-
-/* ===============================
-ENABLE ETCH A SKETCH ON PAGE LOAD
-============================== */
-
-function paintOn(e) {
-  this.classList.add('on');
-}
-// Load default Grid. Use 48, same as markup.
-makeGrid(48);
-
-getGrid();
-
-/* =================
-END OF GRID CREATION
-================= */
-
-
-// Clear grid before re-creating it.
+// Fn to clear grid before re-creating it.
 function clearGrid(){
   document.getElementById('container').innerHTML = '';
 };
+
+// Add paintOn Event Listener to all grid divs
+function getGrid(){
+  let divs = document.querySelectorAll('.grid_item');
+  divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));
+};
+
+// ENABLE ETCH A SKETCH ON PAGE LOAD
+function paintOn(e) {
+  this.classList.add('on');
+}
+
+// Load default Grid. Use 48, same as markup.
+makeGrid(48);
+getGrid();
+
+/** ================
+END OF GRID CREATION
+================ **/
+
 
 /* =============
 CHANGE GRID SIZE
@@ -83,4 +69,25 @@ range.addEventListener('change', (e) => {
 GAME SETTINGS
 =============== */
 
-// Toggle Gridlines
+// TOGGLE GRIDLINES BUTTON
+
+// Get Toggle Gridlines Button
+const toggleGrid = document.getElementById('toggle-grid');
+toggleGrid.addEventListener('click', toggleGridLines); 
+// Onclick, do two things:
+function toggleGridLines(){
+  // 1. Add clicked-in styles to the button
+  toggleGrid.classList.toggle('clicked-in');
+  // 2. Get all grid items and toggle 'no-border' class
+  let divs = document.querySelectorAll('.grid_item');
+  divs.forEach(grid_item => grid_item.classList.toggle('no-border'));
+};
+
+// CLEAR SKETCH BUTTON
+
+
+// COLOR SELECTOR BUTTON
+
+/* ================
+END - GAME SETTINGS
+================ */
