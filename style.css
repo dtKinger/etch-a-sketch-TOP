@@ -147,7 +147,7 @@ MEDIA QUERIES
   }
   
   .container{
-    min-width: 300px;
+    max-width: 300px;
     height: 300px;
     top: -11px;
     left: -15px;
