@@ -6,6 +6,8 @@ GLOBAL DECLARATIONS
 const container = document.getElementById("container");
 // Get the HTML range element
 const range = document.getElementById('grid-size');
+// Get Toggle Gridlines button
+const toggleGrid = document.getElementById('toggle-grid');
 
 /* =============
 GRID RE/CREATION
@@ -56,6 +58,8 @@ range.addEventListener('change', (e) => {
   clearGrid();
   // Create new grid based on size input.
   makeGrid(size);
+  // Release the Toggle Gridline Button if clicked in.
+  releaseToggle();
 });
 
   // At the same time - update the grid size output display
@@ -70,9 +74,7 @@ GAME SETTINGS
 =============== */
 
 // TOGGLE GRIDLINES BUTTON
-
 // Get Toggle Gridlines Button
-const toggleGrid = document.getElementById('toggle-grid');
 toggleGrid.addEventListener('click', toggleGridLines); 
 // Onclick, do two things:
 function toggleGridLines(){
@@ -85,6 +87,11 @@ function toggleGridLines(){
 
 // CLEAR SKETCH BUTTON
 
+function releaseToggle(){
+  if (toggleGrid.classList.contains('clicked-in')){
+    toggleGrid.classList.remove('clicked-in');
+  };
+};
 
 // COLOR SELECTOR BUTTON
 
