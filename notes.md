@@ -12,11 +12,11 @@ Make an etch-a-sketch app.
 * Change the color of the div on event by either:
   1. adding new class to div
   1. changing div's background color using JS
-* 
+
 
 ## TO DO
 1. Add a Clear button
 1. Add a Hide gridlines button
-1. Add an eraser / marker option
-1. Add a colour picker - set variable in CSS
+1. **Add an eraser / marker option**
+1. **Add a colour picker - set variable in CSS**
 1. On clearSketch(), if Toggle Gridlines contains class 'clicked-in', toggle that button again.
