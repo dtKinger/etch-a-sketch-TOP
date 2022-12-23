@@ -41,6 +41,6 @@ a, a:link, a:hover, a:visited{
   color: black;
 }
 
-.controls{
+.left-controls, .right-controls{
   display: none;
 }
