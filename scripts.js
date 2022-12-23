@@ -28,7 +28,7 @@ function clearGrid(){
 };
 
 // Add paintOn Event Listener to all grid divs
-function getGrid(){
+function listenToGrid(){
   let divs = document.querySelectorAll('.grid_item');
   divs.forEach(grid_item => grid_item.addEventListener('mouseover', paintOn));
 };
@@ -37,10 +37,9 @@ function getGrid(){
 function paintOn(e) {
   this.classList.add('on');
 }
-
 // Load default Grid. Use 48, same as markup.
 makeGrid(48);
-getGrid();
+listenToGrid();
 
 /** ================
 END OF GRID CREATION
@@ -54,7 +53,7 @@ CHANGE GRID SIZE
 range.addEventListener('change', (e) => {
   // Set size equal to the input range slider value
   size = e.target.value;
-  // Delete existing grid by emptying the innerHTML^
+  // Delete existing grid by emptying the innerHTML.
   clearGrid();
   // Create new grid based on size input.
   makeGrid(size);
@@ -66,7 +65,7 @@ range.addEventListener('change', (e) => {
   range.addEventListener('change', (e) => {
   range.nextElementSibling.innerHTML = `${e.target.value}` + " px<sup>2</sup>";
   // Enable Etch-a-sketch after grid is re-drawn.
-  getGrid();
+  listenToGrid();
 });
 
 /* ===============
